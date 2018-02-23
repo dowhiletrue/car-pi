@@ -13,6 +13,8 @@ EOF
 
 service keyboard-setup restart
 
+timedatectl set-timezone Europe/Zurich
+
 ## PICAN2
 cat << EOF >> /boot/config.txt
 
