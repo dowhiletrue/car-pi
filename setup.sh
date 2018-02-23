@@ -38,6 +38,10 @@ cp kodi-a2dp/bluetooth.conf /etc/dbus-1/system.d/bluetooth.conf
 cp /etc/pulse/system.pa /etc/pulse/system.pa.orig
 cp kodi-a2dp/system.pa /etc/pulse/system.pa
 
+cd kodi-a2dp
+zip -r service.osmc.btplayer.zip service.osmc.btplayer/
+cd -
+
 ## mobile internet
 apt install ppp wvdial
 
