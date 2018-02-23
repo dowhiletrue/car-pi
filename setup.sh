@@ -1,3 +1,18 @@
+## locale
+locale-gen de_CH.UTF-8
+echo 'LANG="en_US.utf8"' > /etc/default/locale
+
+cat << EOF > /etc/default/keyboard
+XKBMODEL="pc105"
+XKBLAYOUT="ch"
+XKBVARIANT="de_nodeadkeys"
+XKBOPTIONS=""
+
+BACKSPACE="guess"
+EOF
+
+service keyboard-setup restart
+
 ## PICAN2
 cat << EOF >> /boot/config.txt
 
